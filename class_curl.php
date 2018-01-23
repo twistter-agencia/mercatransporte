@@ -14,6 +14,7 @@ class class_Curl{
 	private $curl_httpheader;
 	private $config_curl;
 	private $response;
+	private $newVar
 	
 	public function curl_data($url,$method,$data,$headers){		
 		$this->curl_url = $url;
@@ -57,6 +58,14 @@ class class_Curl{
 	
 	public function close_curl(){
 		curl_close($this->curl);
+	}
+	
+	public function setnewVar($newVar){
+		$this->newVar = $newVar;
+	}
+	
+	public function getnewVar(){
+		return $this->newVar;
 	}
 }
 ?>
